@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .animate-reveal {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+            animation: reveal 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        /* Smooth fade transition between pages */
+        .page-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .page-section.active {
+            display: flex;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-black min-h-screen text-gray-300 font-sans selection:bg-amber-500 selection:text-black">
+
+    <audio id="bg-audio" loop>
+        <source src="the ride.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="page-home" class="page-section active min-h-screen flex-col items-center justify-center p-6">
+        <div class="max-w-2xl text-center space-y-8 w-full">
+            <h1 class="text-4xl md:text-5xl font-light tracking-widest text-white uppercase mb-12">
+                The <span class="text-amber-400 font-medium">Archive</span>
+            </h1>
+            
+            <div class="flex flex-col gap-6">
+                <button onclick="navigate('page-about')" class="group relative px-8 py-4 border border-zinc-800 hover:border-amber-400 transition-all duration-500 ease-out bg-zinc-950/50 hover:bg-amber-400/10 cursor-pointer">
+                    <span class="text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-300">
+                        What's this about?
+                    </span>
+                </button>
+                
+                <button onclick="navigate('page-hobbies')" class="group relative px-4 py-2 border border-zinc-800 hover:border-amber-400 transition-all duration-500 ease-out bg-zinc-950/50 hover:bg-amber-400/10 cursor-pointer">
+                    <span class="text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-300">
+                        What does this guy even do with his time besides wasting mine?
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-about" class="page-section min-h-screen items-center justify-center overflow-hidden text-center p-6">
+        <div id="about-content">
+            <p class="text-amber-400 tracking-[0.3em] uppercase text-sm mb-4">Chapter I</p>
+            <h2 class="text-3xl md:text-5xl font-light text-white leading-relaxed max-w-3xl">
+                Ndinemizwa for wena, <br>
+                Imizwa yam ibanzi igabalala. <br>
+                Ndiphe ithuba ndikubonise ubunzulu bothando lwam, <br>
+                <span class="text-amber-500 italic font-serif">Be my woman.</span>
+            </h2>
+            <div class="mt-12">
+                <button onclick="navigate('page-home')" class="text-zinc-500 hover:text-amber-400 transition-colors text-sm uppercase tracking-widest border-b border-transparent hover:border-amber-400 pb-1 cursor-pointer">Return</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-hobbies" class="page-section min-h-screen py-16 px-6 block">
+        <div class="max-w-4xl mx-auto pt-10">
+            <header class="mb-16 text-center border-b border-zinc-800 pb-8">
+                <h1 class="text-3xl md:text-4xl text-white font-light tracking-wide mb-4">Time spent away from you.</h1>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
+                    <h3 class="text-amber-400 text-xl font-medium mb-3">Muso</h3>
+                    <p 
+                        class="text-sm leading-relaxed text-zinc-400">"Music is my drug, the dealer is 
+                        <a href="https://open.spotify.com/user/31bwirqadyskmh5cpy23wply57la" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
+                            Spotify"
+                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
+                        </a>
+                        , kinda cliche but ja
+                    </p>
+                </div>
+
+                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
+                    <h3 class="text-amber-400 text-xl font-medium mb-3">The Royal Game</h3>
+                    <p 
+                        class="text-sm leading-relaxed text-zinc-400">Learning 
+                        <a href="https://www.chess.com/member/CrookedRook3000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
+                            chess..
+                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
+                        </a>
+                        i'm still at the sucking phase though
+                    </p>
+                </div>
+
+                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
+                    <h3 class="text-amber-400 text-xl font-medium mb-3">Actual Work?</h3>
+                    <p 
+                        class="text-sm leading-relaxed text-zinc-400"> At times I try to be
+                        <a href="https://www.github.com/vuysanan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
+                            serious
+                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
+                    <h3 class="text-amber-400 text-xl font-medium mb-3">Reading books is good, kids</h3>
+                    <p 
+                        class="text-sm leading-relaxed text-zinc-400">I read
+                        <a href="https://app.thestorygraph.com/profile/vuyisanani" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
+                        books
+                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
+                        </a>
+                        partly because I want to keep up with online discourse
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <button onclick="navigate('page-home')" class="text-zinc-500 hover:text-amber-400 transition-colors text-sm uppercase tracking-widest border-b border-transparent hover:border-amber-400 pb-1 cursor-pointer">Return to Base</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const audio = document.getElementById('bg-audio');
+        let audioStarted = false;
+
+        function navigate(targetPageId) {
+            // 1. Handle Audio (Start playing on the very first button click)
+            // Modern browsers block autoplay until the user interacts with the page
+            if (!audioStarted && targetPageId === 'page-about') {
+                audio.play().catch(e => console.log("Audio play failed:", e));
+                audioStarted = true;
+            }
+
+            // 2. Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+                // Brief delay to allow CSS fade-out to happen before setting display:none
+                setTimeout(() => {
+                    if (!section.classList.contains('active')) {
+                        section.style.display = 'none';
+                    }
+                }, 50); 
+            });
+
+            // 3. Show target section
+            const target = document.getElementById(targetPageId);
+            target.style.display = targetPageId === 'page-home' || targetPageId === 'page-about' ? 'flex' : 'block';
+            
+            // Force browser reflow to ensure fade-in transition works
+            void target.offsetWidth; 
+            target.classList.add('active');
+
+            // 4. Re-trigger the CSS animation for the About page text
+            if (targetPageId === 'page-about') {
+                const aboutContent = document.getElementById('about-content');
+                aboutContent.classList.remove('animate-reveal');
+                void aboutContent.offsetWidth; // Force reflow
+                aboutContent.classList.add('animate-reveal');
+            }
+        }
+    </script>
+</body>
+</html>
