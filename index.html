@@ -47,12 +47,6 @@
                         What's this about?
                     </span>
                 </button>
-                
-                <button onclick="navigate('page-hobbies')" class="group relative px-4 py-2 border border-zinc-800 hover:border-amber-400 transition-all duration-500 ease-out bg-zinc-950/50 hover:bg-amber-400/10 cursor-pointer">
-                    <span class="text-lg tracking-wide group-hover:text-amber-400 transition-colors duration-300">
-                        What does this guy even do with his time besides wasting mine?
-                    </span>
-                </button>
             </div>
         </div>
     </section>
@@ -71,68 +65,6 @@
             </div>
         </div>
     </section>
-
-    <section id="page-hobbies" class="page-section min-h-screen py-16 px-6 block">
-        <div class="max-w-4xl mx-auto pt-10">
-            <header class="mb-16 text-center border-b border-zinc-800 pb-8">
-                <h1 class="text-3xl md:text-4xl text-white font-light tracking-wide mb-4">Time spent away from you.</h1>
-            </header>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
-                    <h3 class="text-amber-400 text-xl font-medium mb-3">Muso</h3>
-                    <p 
-                        class="text-sm leading-relaxed text-zinc-400">"Music is my drug, the dealer is 
-                        <a href="https://open.spotify.com/user/31bwirqadyskmh5cpy23wply57la" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
-                            Spotify"
-                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
-                        </a>
-                        , kinda cliche but ja
-                    </p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
-                    <h3 class="text-amber-400 text-xl font-medium mb-3">The Royal Game</h3>
-                    <p 
-                        class="text-sm leading-relaxed text-zinc-400">Learning 
-                        <a href="https://www.chess.com/member/CrookedRook3000" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
-                            chess..
-                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
-                        </a>
-                        i'm still at the sucking phase though
-                    </p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
-                    <h3 class="text-amber-400 text-xl font-medium mb-3">Actual Work?</h3>
-                    <p 
-                        class="text-sm leading-relaxed text-zinc-400"> At times I try to be
-                        <a href="https://www.github.com/vuysanan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
-                            serious
-                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="p-6 border border-zinc-900 bg-zinc-950/30 hover:border-amber-500/50 transition-colors">
-                    <h3 class="text-amber-400 text-xl font-medium mb-3">Reading books is good, kids</h3>
-                    <p 
-                        class="text-sm leading-relaxed text-zinc-400">I read
-                        <a href="https://app.thestorygraph.com/profile/vuyisanani" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-amber-500 hover:text-amber-300 transition-colors w-fit group">
-                        books
-                            <span class="ml-2 transform translate-x-0 group-hover:translate-x-1 transition-transform"></span>
-                        </a>
-                        partly because I want to keep up with online discourse
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <button onclick="navigate('page-home')" class="text-zinc-500 hover:text-amber-400 transition-colors text-sm uppercase tracking-widest border-b border-transparent hover:border-amber-400 pb-1 cursor-pointer">Return to Base</button>
-            </div>
-        </div>
-    </section>
-
     <script>
         const audio = document.getElementById('bg-audio');
         let audioStarted = false;
